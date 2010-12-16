@@ -1,0 +1,10 @@
+shell -${SHELL}  # dash (-) is for login shells
+shelltitle ''
+vbell on
+autodetach on
+startup_message off 
+defscrollback 15000
+bind / eval "scrollback 0" "scrollback 15000"
+
+hardstatus alwayslastline
+hardstatus string "%{= ky}%-Lw%{=r}%20>%n %t%{= ky}%+Lw %{= ky}%-=| %{= kw}%M%d %c%{-} %{=r} ${USER}@%H "
