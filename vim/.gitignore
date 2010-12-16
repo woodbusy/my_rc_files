@@ -1,0 +1,3 @@
+# Ignore things that only exist in a local environment.
+plugin/local_stuff.vim
+local_stuff/
