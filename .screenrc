@@ -1,10 +1,27 @@
+# Makes sure that we get a login shell. This is needed
+# so that RVM will work.
 shell -${SHELL}  # dash (-) is for login shells
+
 shelltitle ''
-vbell on
+
+vbell on # Turn off the audible bell.
+
 autodetach on
-startup_message off 
+
+startup_message off  # No message
+
 defscrollback 15000
+
+# Lets me nuke my scrollback
 bind / eval "scrollback 0" "scrollback 15000"
 
+# caption string ... shows up when we are in split windows.
+# Snagged the original for 'caption string' from 
+# http://www.karan.org/stuff/MyScreenRc
+caption string "%?%F%{= Bk}%? %C%A %D %d-%m-%Y %{= kB} %t%= %?%F%{= Bk}%:%{= wk}%? %n "
+
+# Always show our status line.
 hardstatus alwayslastline
+
+# Wicked-cool status line.
 hardstatus string "%{= ky}%-Lw%{=r}%20>%n %t%{= ky}%+Lw %{= ky}%-=| %{= kw}%M%d %c%{-} %{=r} ${USER}@%H "
