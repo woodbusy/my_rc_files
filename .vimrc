@@ -89,6 +89,11 @@ set incsearch
 
 set cursorline                   
 
+if exists('+colorcolumn')
+  " Show column 80, so I can know when to use the enter key.
+  set colorcolumn=80
+endif
+
 " File Browser
 " ------------
 " hide some files and remove stupid help
@@ -104,10 +109,6 @@ map ,nt :NERDTree
 " Locate the current file in NERDTree
 map ,nf :NERDTreeFind<CR>
 
-" CWD to Carrier source dir
-let g:tkroot="$HOME/code/rubygem-tkscanlib/src"
-map ,tk :exe ":cd ".g:tkroot<CR>
-
 " map a shortcut for a regexp recursive search
 map .f :QFpgrep 
 
@@ -117,6 +118,10 @@ map ,fd :FufDirWithCurrentBufferDir<CR>
 
 map <TAB> 
 
+" Run the current buffer as ruby code.
+map ,rr :exe ':w !ruby'<CR>
+
+" Run the current spec file.
 map ,rs :exe ':!spec --format nested %'<CR>
 map ,tt :let g:rubytest_in_quickfix = 0<CR><Plug>RubyTestRun
 map ,tT :let g:rubytest_in_quickfix = 1<CR><Plug>RubyTestRun
