@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/bufexplorer.vim"]
 	path = .vim/bundle/bufexplorer.vim
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule ".vim/bundle/easymotion"]
+	path = .vim/bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
