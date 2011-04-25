@@ -5,10 +5,10 @@ IRB.conf[:SAVE_HISTORY] = 200
 
 #Set up Looksee
 begin
-  require 'looksee'
+  require 'looksee/shortcuts'
   Looksee.styles[:overridden] = "\e[1;35m%s\e[0m"
 rescue LoadError
-  puts "Couldn't load 'looksee'"
+  puts "Couldn't load 'looksee/shortcuts'"
 end
 
 begin
