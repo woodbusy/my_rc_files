@@ -1,0 +1,21 @@
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule ".vim/bundle/nerdtree.vim"]
+	path = .vim/bundle/nerdtree.vim
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/ack.vim"]
+	path = .vim/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
+[submodule ".vim/bundle/rubytest.vim"]
+	path = .vim/bundle/rubytest.vim
+	url = git://github.com/janx/vim-rubytest.git
+[submodule ".vim/bundle/taglist.vim"]
+	path = .vim/bundle/taglist.vim
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule ".vim/bundle/bufexplorer.vim"]
+	path = .vim/bundle/bufexplorer.vim
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule ".vim/bundle/easymotion"]
+	path = .vim/bundle/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
