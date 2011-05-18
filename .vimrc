@@ -17,6 +17,10 @@ set encoding=utf-8
 set wildmenu
 let g:rubycomplete_rails = 1
 
+" Disable audible bell so I'm not embharassed to type when I've got the 
+" sound on.
+set visualbell
+
 " Needed on some linux distros.
 " see http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html
 filetype off 
