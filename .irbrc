@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'irb/completion'
 require 'irb/ext/save-history'
 
@@ -5,10 +6,10 @@ IRB.conf[:SAVE_HISTORY] = 200
 
 #Set up Looksee
 begin
-  require 'looksee/shortcuts'
+  require 'looksee'
   Looksee.styles[:overridden] = "\e[1;35m%s\e[0m"
 rescue LoadError
-  puts "Couldn't load 'looksee/shortcuts'"
+  puts "Couldn't load 'looksee'"
 end
 
 begin
