@@ -23,7 +23,9 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-
+" Disable audible bell so I'm not embharassed to type when I've got the
+" sound on.
+set visualbell
 
 " Manage buffers effectively.
 " set hidden
