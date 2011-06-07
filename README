@@ -8,3 +8,25 @@ ln -s /path/to/my_rc_files/.screenrc ~/.screenrc
 ln -s /path/to/my_rc_files/.vim ~/.vim
 ln -s /path/to/my_rc_files/.vimrc ~/.vimrc
 ln -s /path/to/my_rc_files/.gvimrc ~/.gvimrc
+
+
+#######
+Adding a submodule:
+
+git add https://github.com/majutsushi/tagbar.git .vim/bundle/tagbar
+git add .
+git commit
+
+
+-----
+Initializing my vim environment:
+
+git submodule init
+git submodule update
+
+-----
+
+Removing a submodule
+- Delete the submodule from .gitmodules
+- git rm --cached .vim/bundle/taglist.vim
+

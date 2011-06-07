@@ -79,6 +79,15 @@ if exists('+colorcolumn')
   set colorcolumn=80
 endif
 
+" Tagbar
+" --------
+" Shove the tagbar onto the left.
+let g:tagbar_left = 1
+" Get rid of extra whitespace
+let g:tagbar_compact = 1
+" Autoclose tagbar after jumping
+let g:tagbar_autoclose = 1
+
 " File Browser
 " ------------
 " hide some files and remove stupid help
@@ -104,13 +113,7 @@ map ,tt :let g:rubytest_in_quickfix = 0<CR><Plug>RubyTestRun
 map ,tT :let g:rubytest_in_quickfix = 1<CR><Plug>RubyTestRun
 map ,tf :let g:rubytest_in_quickfix = 0<CR><Plug>RubyFileRun
 map ,tF :let g:rubytest_in_quickfix = 1<CR><Plug>RubyFileRun
-map ,m :TlistToggle<CR>
-
-"taglist settings
-" Only show the tags for the current file
-let Tlist_Show_One_File = 1
-" Sort methods by name
-let Tlist_Sort_Type = "name"
+map ,m :TagbarToggle<CR>
 
 " Mapping so that I can easily change to the working directory of the
 " current file.
