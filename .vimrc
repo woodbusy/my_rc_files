@@ -155,3 +155,6 @@ let g:tagbar_type_objc = {
         \ 'enumeration'    : 'e'
     \ }
 \ }
+
+" Enable autocompletion
+let g:neocomplcache_enable_at_startup = 1
