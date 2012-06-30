@@ -15,6 +15,9 @@ defscrollback 15000
 # Lets me nuke my scrollback
 bind / eval "scrollback 0" "scrollback 15000"
 
+# Copy's contents of screen buffer into my OSX clipboard.
+bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
+
 # caption string ... shows up when we are in split windows.
 # Snagged the original for 'caption string' from 
 # http://www.karan.org/stuff/MyScreenRc
