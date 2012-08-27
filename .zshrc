@@ -29,12 +29,34 @@ ZSH_THEME="prose"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn ruby)
+plugins=(git gem svn)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
 
+# zsh configuration
 zstyle ':completion::complete:cd::' tag-order '! users' -
 zstyle ':completion:*' use-cache on
 setopt NO_AUTO_MENU
+alias mv='nocorrect mv'
+alias cp='nocorrect cp'
+alias mkdir='nocorrect mkdir'
+alias rake='noglob rake'
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Configure history
+export HISTFILE=/dev/null
+
+# Colors for ls
+export CLICOLOR=1
+export LSCOLORS=Axfxcxdxbxegedabagacad
+# Colors for httpie and probably others
+export TERM=xterm-256color
+
+# aliases
+alias mv='mv -i'
+alias ls='ls -Fp'
+# HTTPie. Other favorite styles include "friendly" and "perldoc"
+alias http='http -s manni'
