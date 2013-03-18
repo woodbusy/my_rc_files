@@ -12,7 +12,7 @@ ZSH_THEME="prose"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -35,6 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # zsh configuration
+zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion::complete:cd::' tag-order '! users' -
 zstyle ':completion:*' use-cache on
 setopt NO_AUTO_MENU
@@ -46,8 +47,12 @@ alias rake='noglob rake'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Set PATH
+# TODO include release tool paths
+
 # Configure history
-export HISTFILE=/dev/null
+#export HISTFILE=/dev/null
+export SAVEHIST=0
 
 # Colors for ls
 export CLICOLOR=1
@@ -60,3 +65,11 @@ alias mv='mv -i'
 alias ls='ls -Fp'
 # HTTPie. Other favorite styles include "friendly" and "perldoc"
 alias http='http -s manni'
+
+
+function chpwd() {
+    emulate -L zsh
+    if [ -f ".envfile" ]; then
+        source .envfile
+    fi
+}
