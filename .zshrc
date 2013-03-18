@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion::complete:cd::' tag-order '! users' -
 zstyle ':completion:*' use-cache on
+zstyle ':completion:*' hosts off
 setopt NO_AUTO_MENU
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'
@@ -72,4 +73,8 @@ function chpwd() {
     if [ -f ".envfile" ]; then
         source .envfile
     fi
+}
+
+__git_files () { 
+    _wanted files expl 'local files' _files     
 }
