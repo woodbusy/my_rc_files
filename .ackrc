@@ -1,3 +1,5 @@
 --color-filename=RED
 --color-lineno=BLACK
 --color-match=GREEN
+--type-add
+ruby=.task
