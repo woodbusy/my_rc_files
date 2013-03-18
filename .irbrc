@@ -25,3 +25,13 @@ begin
 rescue LoadError
   puts "Couldn't load 'sketches'"
 end
+
+# Load an .irbrc in the local directory, if there is one
+local_irbrc = Dir.pwd + "/.irbrc"
+if File.exists?( local_irbrc ) and local_irbrc != __FILE__
+  begin
+    load ".irbrc"
+  rescue LoadError => err
+    puts "Couldn't load local .irbrc"
+  end
+end
