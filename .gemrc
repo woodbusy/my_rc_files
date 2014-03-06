@@ -1,6 +1,7 @@
 --- 
 :backtrace: false
 :benchmark: false
+:disable_default_gem_server: true
 :bulk_threshold: 1000
 :sources: 
 - http://rubygems.org/
