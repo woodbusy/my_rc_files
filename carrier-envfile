@@ -5,6 +5,6 @@ if [ -z "$TKROOT" ] ; then
   export CARRIER_DEV=~/src/scanner-dev/carrier/src
   export TKROOT=$HOME/src/carrier/src
 
-  alias irb="irb -I lib"
+  alias irb="irb -I lib -I spec"
   alias devroot='cd $TKROOT' # shortcut to cd to the dev directory
 fi

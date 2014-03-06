@@ -48,9 +48,6 @@ alias rake='noglob rake'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-# Set PATH
-# TODO include release tool paths
-
 # Configure history
 #export HISTFILE=/dev/null
 export SAVEHIST=0
@@ -66,7 +63,7 @@ alias mv='mv -i'
 alias ls='ls -Fp'
 # HTTPie. Other favorite styles include "friendly" and "perldoc"
 alias http='http -s manni'
-
+alias irb='irb -I lib'
 
 function chpwd() {
     emulate -L zsh
@@ -78,3 +75,5 @@ function chpwd() {
 __git_files () { 
     _wanted files expl 'local files' _files     
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
