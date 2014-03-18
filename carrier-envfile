@@ -1,4 +1,9 @@
-rvm use system
+esc=`echo -en "\033"`
+cc_green="${esc}[0;32m"
+cc_normal=`echo -en "${esc}[m\017"`
+ 
+rvm use system > /dev/null
+echo "${cc_green}Now using /opt/carrier/bin/ruby${cc_normal}"
 
 export PATH=/opt/carrier/bin:$PATH
 export CARRIER_DEV=$HOME/src/carrier/src
