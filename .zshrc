@@ -65,6 +65,8 @@ alias ls='ls -Fp'
 alias http='http -s manni'
 alias irb='irb -I lib'
 
+PATH=$PATH:$HOME/bin
+
 function chpwd() {
     emulate -L zsh
     if [ -f ".envfile" ]; then
