@@ -65,7 +65,7 @@ alias ls='ls -Fp'
 alias http='http -s manni'
 alias irb='irb -I lib'
 
-PATH=$PATH:$HOME/bin
+PATH=/usr/local/bin:$PATH
 
 function chpwd() {
     emulate -L zsh
