@@ -45,7 +45,9 @@ alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'
 alias rake='noglob rake'
 
-
+# Put my bins before the system bins
+PATH=/usr/local/bin:$PATH
+# Set up RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Configure history
@@ -65,8 +67,6 @@ alias ls='ls -Fp'
 alias http='http -s manni'
 alias irb='irb -I lib'
 
-PATH=/usr/local/bin:$PATH
-
 function chpwd() {
     emulate -L zsh
     if [ -f ".envfile" ]; then
@@ -74,8 +74,8 @@ function chpwd() {
     fi
 }
 
-__git_files () { 
-    _wanted files expl 'local files' _files     
+__git_files () {
+    _wanted files expl 'local files' _files
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
