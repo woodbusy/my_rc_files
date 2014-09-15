@@ -1,5 +1,7 @@
 require "pp"
 
+Pry.config.theme = "solarized"
+
 #Set up Looksee
 begin
   require 'looksee'
@@ -16,7 +18,7 @@ end
 #Set up Sketches
 begin
   require "sketches"
-  Sketches.config( :editor => 'mvim' )
+  Sketches.config( :editor => 'subl' )
 rescue LoadError
   puts "Couldn't load 'sketches'"
 end

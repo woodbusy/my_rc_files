@@ -66,6 +66,7 @@ alias ls='ls -Fp'
 # HTTPie. Other favorite styles include "friendly" and "perldoc"
 alias http='http -s manni'
 alias irb='irb -I lib'
+alias pry='pry -I lib'
 
 function chpwd() {
     emulate -L zsh
