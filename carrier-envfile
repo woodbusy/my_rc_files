@@ -6,7 +6,7 @@ rvm use system > /dev/null
 echo "${cc_green}Now using /opt/carrier/bin/ruby${cc_normal}"
 
 export PATH=/opt/carrier/bin:$PATH
-export CARRIER_DEV=$HOME/src/carrier/src
+export CARRIER_DEV=$HOME/src/carrier
 
 alias irb="irb -I lib -I spec"
 alias pry="pry -I lib -I spec"
