@@ -1,0 +1,6 @@
+# Configure with:
+#   git config --global core.excludesfile '~/.gitignore_global'
+
+.rvmrc
+.ruby-gemset
+.ruby-version
