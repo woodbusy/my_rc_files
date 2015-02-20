@@ -59,25 +59,20 @@ if version >= 500
 endif
 
 set columns=100
-set lines=70
-set guifont=Inconsolata:h12
-set background=dark
-colorscheme ir_black
+set lines=30
+set guifont=Consolas:h13
+set background=light
+" colorscheme ir_black
 
 " Hide the toolbar (I don't use it)
-if has("gui_running")
-    set guioptions=egmrt
-endif
+" if has("gui_running")
+"    set guioptions=egmrt
+" endif
 
 
 " Always show the statusline
 set laststatus=2
 
-function! MyCWD() 
-    let l:cwd = substitute(getcwd(), '/Users/mryan/', "~/", "g")
-    return l:cwd
-endfunction 
-
 " Format the statusline
-set statusline=%<%f\ %(%h%m%r\ %)%=%{MyCWD()}\ %-15.15(%l,%c%V%)%P
+set statusline=%<%f\ %(%h%m%r\ %)%=%{getcwd()}\ %-15.15(%l,%c%V%)%P
 
